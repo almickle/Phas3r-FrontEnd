@@ -1,5 +1,5 @@
 import React from 'react'
-import "/home/mickle/Development/code/phase3/Phas3r-FrontEnd/phas3r/src/stylesheets/movies.css"
+import "./stylesheets/movies.css"
 
 
 function Movies({movieData}) {

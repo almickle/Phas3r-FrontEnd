@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "/home/mickle/Development/code/phase3/Phas3r-FrontEnd/phas3r/src/stylesheets/navbar.css"
+import "./stylesheets/navbar.css"
 
 function NavBar() {
   return (
