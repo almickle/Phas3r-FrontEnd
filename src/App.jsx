@@ -35,7 +35,7 @@ function App() {
         <Route exact path="/reviews">
           <Reviews/>
         </Route>
-        <Route exact path="login">
+        <Route exact path="/login">
             <Login/>
         </Route>
       </Switch>
