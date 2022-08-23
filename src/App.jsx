@@ -1,5 +1,12 @@
 import './stylesheets/application.css'
 import { useState, useEffect } from 'react'
+import { Switch, Route } from "react-router-dom"
+import Home from "./components/Home"
+import Movies from "./components/Movies"
+import NavBar from "./components/NavBar"
+import Reviews from "./components/Reviews"
+import Login from "./components/Login"
+
 
 function App() {
 
@@ -22,12 +29,25 @@ function App() {
     })
 
   return (
-
-    <div id="content-div">
-        {movieElements}
+    <div id="container">
+    <NavBar/>
+    <div id="nav">
+      <Switch>
+        <Route exact path="/">
+          <Home/>
+        </Route>
+        <Route exact path="/movies">
+          <Movies movies = {movieElements}/>
+        </Route>
+        <Route exact path="/reviews">
+          <Reviews/>
+        </Route>
+        <Route exact path="login">
+            <Login/>
+        </Route>
+      </Switch>
     </div>
-    
-  )
-}
+  </div>)}
+  
 
 export default App
