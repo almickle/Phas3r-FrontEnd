@@ -1,9 +1,9 @@
-import './App.css'
+import './stylesheets/application.css'
 import { useState, useEffect } from 'react'
 
 function App() {
 
-  const [movieData, setMovieData] = useState(null)
+  const [movieData, setMovieData] = useState([])
 
     useEffect(() => {
         fetch("http://localhost:9292/movies")
@@ -14,15 +14,17 @@ function App() {
     }, [])
 
     const movieElements = movieData.map(movie => {
-        return <img src={movie.thumbnail_url} key={movie.id} alt={""} />
+        return (
+          <div className="movie-div" key={movie.id} >
+              <img src={movie.thumbnail_url} key={movie.id} alt={""} className="movie-img" />
+          </div>
+        )
     })
 
   return (
 
-    <div>
-        <div>
-            {movieElements}
-        </div>
+    <div id="content-div">
+        {movieElements}
     </div>
     
   )
