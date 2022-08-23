@@ -20,15 +20,9 @@ function App() {
             setMovieData(data)})
     }, [])
 
-    const movieElements = movieData.map(movie => {
-        return (
-          <div className="movie-div" key={movie.id}>
-              <img src={movie.thumbnail_url} key={movie.id} alt={""} className="movie-img" />
-          </div>
-        )
-    })
 
   return (
+
     <div id="container">
     <NavBar/>
     <div id="nav">
@@ -37,7 +31,7 @@ function App() {
           <Home/>
         </Route>
         <Route exact path="/movies">
-          <Movies movies = {movieElements}/>
+          <Movies movieData = {movieData}/>
         </Route>
         <Route exact path="/reviews">
           <Reviews/>
@@ -47,7 +41,9 @@ function App() {
         </Route>
       </Switch>
     </div>
-  </div>)}
+  </div>
+  
+  )}
   
 
 export default App
