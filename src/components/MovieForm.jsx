@@ -1,5 +1,5 @@
 import React from 'react'
-import '/Users/kelanhamman/Desktop/Development/code/phase-3/Phas3r-FrontEnd/src/components/stylesheets/movieform.css'
+import './stylesheets/movieform.css'
 
 function MovieForm() {
   return (
