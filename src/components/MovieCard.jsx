@@ -1,5 +1,5 @@
 import "./stylesheets/moviecard.css"
-import {Switch, Route, useHistory} from "react-router-dom"
+import {useHistory} from "react-router-dom"
 
 
 function MovieCard({movie}) {
