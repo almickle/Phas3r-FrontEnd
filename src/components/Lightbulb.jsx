@@ -15,7 +15,7 @@ function Lightbulb({movie}) {
 
   useEffect(() => {
     console.log("data:")
-    console.log(scores)
+    console.log(avgScore)
   }, [avgScore])
 
 
