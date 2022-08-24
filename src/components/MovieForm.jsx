@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react';
+import {useState} from 'react'
 import './stylesheets/movieform.css'
 
 function MovieForm() {
@@ -20,6 +20,7 @@ function MovieForm() {
 
             }),
         })
+        console.log('test')
         setNewMovie()
       }
     
