@@ -4,23 +4,6 @@ import "./stylesheets/navbar.css"
 
 function NavBar() {
 
-  function handleMouseIn(event) {
-    if(event.target.id = "route-span") {
-      event.target.style.backgroundColor = "white"
-      event.target.style.opacity = "80%"
-      event.target.children[0].style.backgroundColor = "white"
-      event.target.children[0].style.color = "#333"
-    }
-  }
-
-  function handleMouseOut(event) {
-    if(event.target.id = "route-span") {
-      event.target.style.backgroundColor = "#333"
-      event.target.style.opacity = "100%"
-      event.target.children[0].style.backgroundColor = "#333"
-      event.target.children[0].style.color = "white"
-    }
-  }
 
   return (
     <div id="navbar">
