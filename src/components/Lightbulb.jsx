@@ -5,17 +5,17 @@ import "./stylesheets/lightbulb.css"
 
 function Lightbulb({movie}) {
 
-  useEffect(() => {
-    fetch(`http://localhost:9292/movies/${movie.id}`)
-  }, [])
+  // useEffect(() => {
+  //   fetch(`http://localhost:9292/movies/${movie.id}`)
+  // }, [])
 
 
-  const lbScore = movie.reviews
+  // const lbScore = movie.reviews
 
-  useEffect(() => {
-    console.log("data:")
-    console.log(lbScore)
-  }, [])
+  // useEffect(() => {
+  //   console.log("data:")
+  //   console.log(lbScore)
+  // }, [])
 
 
   return (
