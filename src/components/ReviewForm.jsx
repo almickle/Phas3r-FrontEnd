@@ -4,7 +4,7 @@ function ReviewForm({movieData}) {
  
    const movieId= window.location.href.toString().match(/\/[0-9]+/)[0].replaceAll("/", "")
    const movie = movieData[movieId -1]
-   
+
    const[stateScore, setStateScore] = useState('')
    const[stateComment, setStateComment] = useState('')
 
@@ -21,6 +21,8 @@ function ReviewForm({movieData}) {
           body: JSON.stringify({
               score: newReview.score,
               comment: newReview.comment,
+              user_id: '',
+              movie_id: '',
           })
       })
 }
@@ -33,13 +35,13 @@ function ReviewForm({movieData}) {
         <label> Title </label>
         <input type="text" name="Title" value = {movie.title} />
       </div>
-      <div className="input-container">
+      {/* <div className="input-container">
         <label> Username </label>
         <input type="text" name="Username" placeholder = "Username" required/>
-      </div>
+      </div> */}
       <div className="input-container">
-        <label> Review </label>
-        <input type="text" name="Review" placeholder = "Review" required onChange={(event) => setStateComment(event.target.value)}/>
+        <label> comment </label>
+        <input type="text" name="comment" placeholder = "comment" required onChange={(event) => setStateComment(event.target.value)}/>
       </div>
       <div className="input-container">
         <label> Score </label>
