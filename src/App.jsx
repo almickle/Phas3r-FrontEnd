@@ -20,7 +20,16 @@ function App() {
     description: null,
     budget: 160,
     box_office: 836.8
-    }])
+    }, 
+    {
+      id: 2,
+      title: "Avatar",
+      thumbnail_url: "https://th.bing.com/th/id/R.2bc65b280e714cdda50cae397ba574f9?rik=cbM0VAz9tHQTKw&riu=http%3a%2f%2f1.bp.blogspot.com%2f_KIU4QaKZDps%2fTOwDHqDLRnI%2fAAAAAAAAAFU%2fGafWBNV-3RY%2fs1600%2fAvatar_DVD.jpg&ehk=0uT2hMrAaKrFce070UTPBzuiSeZMq6jV2IVFV6IqYSs%3d&risl=&pid=ImgRaw&r=0",
+      director: "James Cameron",
+      description: null,
+      budget: 237,
+      box_office: 2847
+      }])
 
     useEffect(() => {
         fetch("http://localhost:9292/movies")

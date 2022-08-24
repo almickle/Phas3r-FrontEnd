@@ -4,17 +4,3 @@
     display: flex;
     flex-wrap: wrap;
   }
-  
-.movie-div {
-    width: 20%;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 1%;
-  }
-
-  .movie-img {
-    height: 100%;
-    display: block;
-    margin: auto;
-  }
