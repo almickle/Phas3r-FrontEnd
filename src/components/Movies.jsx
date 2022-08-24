@@ -13,7 +13,10 @@ function Movies({movieData}) {
 })
 
   return (
-    <div id='content-div'>{movieElements}</div>
+    <div id='content-div'>
+      <span id="button-banner"></span>
+      {movieElements}
+    </div>
   )
 }
 
