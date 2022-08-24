@@ -54,11 +54,11 @@ function MovieForm() {
         </div>
         <div className="input-container">
           <label> Budget </label>
-          <input type="text" name="Budget" placeholder = "Budget" onChange={(event) => setStateBudget(event.target.value)}/>
+          <input type="number" name="Budget" placeholder = "Budget" onChange={(event) => setStateBudget(event.target.value)}/>
         </div>
         <div className="input-container">
           <label> Box Office </label>
-          <input type="text" name="Box Office" placeholder = "Box Office" onChange={(event) => setStateBoxOffice(event.target.value)}/>
+          <input type="number" name="Box Office" placeholder = "Box Office" onChange={(event) => setStateBoxOffice(event.target.value)}/>
         </div>
         <button> Add + </button>
       </form>

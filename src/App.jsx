@@ -77,8 +77,8 @@ function App() {
         <Route exact path="/movie_form">
           <MovieForm/>
         </Route>
-        <Route exact path="/review_form">
-          <ReviewForm/>
+        <Route exact path="/review_form/:id">
+          <ReviewForm movieData={movieData}/>
         </Route>
       </Switch>
   </div>
