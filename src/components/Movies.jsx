@@ -1,10 +1,19 @@
 import MovieCard from "./MovieCard"
+import { useHistory } from "react-router-dom"
 import "./stylesheets/movies.css"
 
 
 function Movies({movieData}) {
 
-  console.log(movieData)
+  let history = useHistory()
+
+function handleAddMovieClick(){
+history.push('/movie_form')
+}
+
+function handleAddReviewClick(){
+  console.log('test 2')
+}
 
   const movieElements = movieData.map(movie => {
     return (
@@ -14,7 +23,10 @@ function Movies({movieData}) {
 
   return (
     <div id='content-div'>
-      <span id="button-banner"></span>
+      <span id="button-banner">
+        <button onClick = {handleAddMovieClick}> Add a Movie </button>
+        <button onClick = {handleAddReviewClick}> Add a Review </button>
+      </span>
       {movieElements}
     </div>
   )

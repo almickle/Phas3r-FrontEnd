@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar"
 import Reviews from "./components/Reviews"
 import Login from "./components/Login"
 import MovieReview from './components/MovieReview'
+import MovieForm from './components/MovieForm'
 
 import "./components/stylesheets/application.css";
 
@@ -71,6 +72,9 @@ function App() {
         </Route>
         <Route exact path="/movies/:id/reviews">
           <MovieReview movieData={movieData}/>
+        </Route>
+        <Route exact path="/movie_form">
+          <MovieForm/>
         </Route>
       </Switch>
   </div>
