@@ -2,7 +2,7 @@
     height: 200px;
     align-items: center;
     display: flex;
-    margin-bottom: 1%;
+    margin-bottom: 2%;
 }
 
 #navbar-logo {
@@ -20,12 +20,17 @@
 }
 
 .route-link {
-    margin-top: 8px;
-    margin-left: 5%;
-    margin-right: 5%;
-    color: azure;
+    color: white;
     font-family: "CoreCircus", sans-serif;
-    /* letter-spacing: -0.5rem; */
     font-size: 1.3vw;
     text-decoration: none;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 7px;
+}
+
+.route-link:hover {
+    background-color: white;
+    opacity: 80%;
+    color: #333;
 }

@@ -1,8 +1,13 @@
 import React from 'react'
+import Slideshow from './Slideshow'
 
-function Home() {
+import "./stylesheets/home.css"
+
+function Home({movieData}) {
   return (
-    <div></div>
+    <div id='home-div'>
+      <Slideshow movieData={movieData} />
+    </div>
   )
 }
 
