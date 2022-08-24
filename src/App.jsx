@@ -8,6 +8,7 @@ import Reviews from "./components/Reviews"
 import Login from "./components/Login"
 import MovieReview from './components/MovieReview'
 import MovieForm from './components/MovieForm'
+import ReviewForm from './components/ReviewForm'
 
 import "./components/stylesheets/application.css";
 
