@@ -1,0 +1,13 @@
+
+#slideshow-div {
+    display: flex;
+    background-color: aqua;
+    height: 700px;
+    width: fit-content;
+    justify-content: center;
+}
+
+#movie-img {
+    width: auto;
+    height: 100%;
+}

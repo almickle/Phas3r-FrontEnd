@@ -12,14 +12,23 @@ import "./components/stylesheets/application.css";
 
 function App() {
 
-  const [movieData, setMovieData] = useState([])
+  const [movieData, setMovieData] = useState([{
+    id: 1,
+    title: "Inception",
+    thumbnail_url: "https://th.bing.com/th/id/R.35072388899348650e7f6d7b322cff5d?rik=LOcfHdW%2bnTU7RA&riu=http%3a%2f%2fwww.imfdb.org%2fimages%2fthumb%2f9%2f91%2fInception_poster.jpg%2f405px-Inception_poster.jpg&ehk=yToRDzLt42OVbE%2f%2f4LvOsqlAMrrJ3VCbAuRMNngcvRA%3d&risl=&pid=ImgRaw&r=0",
+    director: "Christopher Nolan",
+    description: null,
+    budget: 160,
+    box_office: 836.8
+    }])
 
     useEffect(() => {
         fetch("http://localhost:9292/movies")
         .then(resp => resp.json())
         .then(data => {
-            console.log(data)
-            setMovieData(data)})
+          console.log("Data:")
+          console.log(data)
+          setMovieData(data)})
     }, [])
 
 
@@ -29,16 +38,16 @@ function App() {
       <NavBar/>
       <Switch>
         <Route exact path="/">
-          <Home/>
+          <Home movieData={movieData} />
         </Route>
         <Route exact path="/movies">
-          <Movies movieData = {movieData}/>
+          <Movies movieData={movieData}/>
         </Route>
         <Route exact path="/reviews">
           <Reviews/>
         </Route>
         <Route exact path="/login">
-            <Login/>
+          <Login/>
         </Route>
       </Switch>
   </div>
