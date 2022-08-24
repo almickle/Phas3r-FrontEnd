@@ -4,57 +4,60 @@ import './stylesheets/movieform.css'
 
 function MovieForm() {
 
-    const[newMovie, setNewMovie] = useState({title: "", thumbnail_url: "", director: "",
-     description: "", budget: "", box_office: ""})
+  const[stateTitle, setStateTitle] = useState("")
+  const[stateThumbnail, setStateThumbnail] = useState("")
+  const[stateDirector, setStateDirector] = useState("")
+  const[stateDescription, setStateDescription] = useState("")
+  const[stateBudget, setStateBudget] = useState("")
+  const[stateBoxOffice, setStateBoxOffice] = useState("")
 
+  const newMovie = {title: stateTitle, thumbnail_url: stateThumbnail, description: stateDescription, director: stateDirector, budget: stateBudget, box_office: stateBoxOffice}
 
+  function handleSubmit() {
       fetch('http://localhost:9292/movies', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                title: "Dirty Cowboy Party",
-                thumbnail_url: "https://upload.wikimedia.org/wikipedia/en/8/8b/No_Country_for_Old_Men_poster.jpg",
-                director: "Spielberg", 
-                description: "potato tomato booyah",
-                budget: 100000,
-                box_office: 1000000000
+                title: newMovie.title,
+                thumbnail_url: newMovie.thumbnail_url,
+                director: newMovie.director, 
+                description: newMovie.description,
+                budget: newMovie.budget,
+                box_office: newMovie.box_office
             })
         })
-        .catch(error => console.log(error))
+      .catch(error => console.log(error))
+  }
 
-      useEffect(() => {
-        console.log(newMovie)
-      }, [newMovie])
-    
   
   return (
     <div className="form">
         <h1> Add a Movie </h1>
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className="input-container">
         <label> Title </label>
-        <input type="text" name="Title" placeholder = "Title" onChange={(event) => setNewMovie({title: "Michael"})}/>
+        <input type="text" name="Title" placeholder = "Title" onChange={(event) => setStateTitle(event.target.value)}/>
       </div>
       <div className="input-container">
         <label> Movie Image </label>
-        <input type="text" name="image" placeholder = "Movie Image" onChange={(event) => setNewMovie({thumbnail_url: "Image"})}/>
+        <input type="text" name="image" placeholder = "Movie Image" onChange={(event) => setStateThumbnail(event.target.value)}/>
       </div>
       <div className="input-container">
         <label> Director </label>
-        <input type="text" name="Director" placeholder = "Director" />
+        <input type="text" name="Director" placeholder = "Director" onChange={(event) => setStateDirector(event.target.value)}/>
       </div><div className="input-container">
         <label> Description </label>
-        <input type="text" name="Description" placeholder = "Description" />
+        <input type="text" name="Description" placeholder = "Description" onChange={(event) => setStateDescription(event.target.value)}/>
       </div><div className="input-container">
         <label> Budget </label>
-        <input type="text" name="Budget" placeholder = "Budget" />
+        <input type="text" name="Budget" placeholder = "Budget" onChange={(event) => setStateBudget(event.target.value)}/>
       </div><div className="input-container">
         <label> Box Office </label>
-        <input type="text" name="Box Office" placeholder = "Box Office" />
+        <input type="text" name="Box Office" placeholder = "Box Office" onChange={(event) => setStateBoxOffice(event.target.value)}/>
       </div>
-      <button onSubmit={handleSubmit}> Add + </button>
+      <button> Add + </button>
     </form>
   </div>
   )
