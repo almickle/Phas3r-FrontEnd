@@ -22,6 +22,7 @@ function MovieCard({movie}) {
             <div id="movie-desc-div">
                 <p id="movie-desc">{movie.description}</p>
             </div>
+            <button onClick = {handleClick}> Reviews </button>
         </div>
     </div>
   )
