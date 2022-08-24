@@ -1,9 +1,9 @@
 import "./stylesheets/moviecard.css"
 import {useHistory} from "react-router-dom"
-
+import {useEffect, useState} from 'react'
+import Lightbulb from "./Lightbulb"
 
 function MovieCard({movie}) {
-    
 
   let history = useHistory()
 
@@ -25,6 +25,7 @@ function MovieCard({movie}) {
                 <p id="movie-desc">{movie.description}</p>
             </div>
             <button onClick = {handleClick}> Reviews </button>
+            <Lightbulb />
         </div>
     </div>
   )

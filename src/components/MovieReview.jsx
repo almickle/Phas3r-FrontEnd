@@ -9,8 +9,6 @@ function MovieReview() {
         setMovieID(window.location.href.toString().match(/\/[0-9]+\//)[0].replaceAll("/", ""))
     }, [])
 
-    console.log(window.location.href.toString().match(/\/[0-9]+\//)[0].replaceAll("/", ""))
-
 
   return (
     <div id="movie-review-div">
