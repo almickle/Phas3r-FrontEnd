@@ -34,32 +34,35 @@ function MovieForm() {
   
   return (
     <div className="form">
-        <h1> Add a Movie </h1>
-    <form onSubmit={handleSubmit}>
-      <div className="input-container">
-        <label> Title </label>
-        <input type="text" name="Title" placeholder = "Title" onChange={(event) => setStateTitle(event.target.value)}/>
-      </div>
-      <div className="input-container">
-        <label> Movie Image </label>
-        <input type="text" name="image" placeholder = "Movie Image" onChange={(event) => setStateThumbnail(event.target.value)}/>
-      </div>
-      <div className="input-container">
-        <label> Director </label>
-        <input type="text" name="Director" placeholder = "Director" onChange={(event) => setStateDirector(event.target.value)}/>
-      </div><div className="input-container">
-        <label> Description </label>
-        <input type="text" name="Description" placeholder = "Description" onChange={(event) => setStateDescription(event.target.value)}/>
-      </div><div className="input-container">
-        <label> Budget </label>
-        <input type="text" name="Budget" placeholder = "Budget" onChange={(event) => setStateBudget(event.target.value)}/>
-      </div><div className="input-container">
-        <label> Box Office </label>
-        <input type="text" name="Box Office" placeholder = "Box Office" onChange={(event) => setStateBoxOffice(event.target.value)}/>
-      </div>
-      <button> Add + </button>
-    </form>
-  </div>
+      <h1> Add a Movie </h1>
+      <form onSubmit={handleSubmit}>
+        <div className="input-container">
+          <label> Title </label>
+          <input type="text" name="Title" placeholder = "Title" onChange={(event) => setStateTitle(event.target.value)}/>
+        </div>
+        <div className="input-container">
+          <label> Movie Image </label>
+          <input type="text" name="image" placeholder = "Movie Image" onChange={(event) => setStateThumbnail(event.target.value)}/>
+        </div>
+        <div className="input-container">
+          <label> Director </label>
+          <input type="text" name="Director" placeholder = "Director" onChange={(event) => setStateDirector(event.target.value)}/>
+        </div>
+        <div className="input-container">
+          <label> Description </label>
+          <input type="text" name="Description" placeholder = "Description" onChange={(event) => setStateDescription(event.target.value)}/>
+        </div>
+        <div className="input-container">
+          <label> Budget </label>
+          <input type="text" name="Budget" placeholder = "Budget" onChange={(event) => setStateBudget(event.target.value)}/>
+        </div>
+        <div className="input-container">
+          <label> Box Office </label>
+          <input type="text" name="Box Office" placeholder = "Box Office" onChange={(event) => setStateBoxOffice(event.target.value)}/>
+        </div>
+        <button> Add + </button>
+      </form>
+    </div>
   )
 }
 
