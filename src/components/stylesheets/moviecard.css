@@ -1,13 +1,41 @@
-.movie-img-div {
-    width: 20%;
-    height: 400px;
+#movie-card-div {
     display: flex;
-    align-items: center;
-    margin-bottom: 1%;
+    flex-direction: row;
+    margin-bottom: 3%;
+}
+
+#movie-info-div {
+    margin-left: 1%;
+}
+
+#movie-title {
+    font-family: "CoreCircus", sans-serif;
+    font-size: 2.5vw;
+}
+
+.movie-info {
+    font-family: "CoreCircus", sans-serif;
+    font-size: 1.3vw;
+    margin-bottom: 2%;
+}
+
+#movie-desc-div {
+    width: 400px;
+}
+
+#movie-desc {
+    font-family: "CoreCircus", sans-serif;
+    font-size: 1.3vw;
+}
+
+.movie-img-div {
+    width: 500px;
+    height: 600px;
+    display: flex;
+    margin-left: 1%;
   }
 
   .movie-img {
     height: 100%;
-    display: block;
     margin: auto;
   }
