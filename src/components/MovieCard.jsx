@@ -1,12 +1,17 @@
 import "./stylesheets/moviecard.css"
-
+import {useHistory} from "react-router-dom"
 
 function MovieCard({movie}) {
 
+  let history = useHistory()
+
+  function handleClick(){
+    history.push(`/review/${movie.id}`)
+  }
 
   return (
     <div id="movie-card-div">
-        <div className="movie-img-div">
+        <div className="movie-img-div" onClick = {handleClick}>
             <img className="movie-img" src={movie.thumbnail_url} alt={""} />
         </div>
         <div id="movie-info-div">
