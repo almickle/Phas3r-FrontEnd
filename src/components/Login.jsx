@@ -6,8 +6,11 @@ function App() {
  
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [users, setUsers] = useState([]);
 
   let history = useHistory()
+
+// useeffect fetch the users, set state(users), 
 
   const database = [
     {
@@ -75,7 +78,7 @@ function App() {
     <div className="app">
       <div className="login-form">
         <div className="title">Sign In</div>
-        {isSubmitted ? <div> {history.push('/Home')}</div> : renderForm}
+        {isSubmitted ? <div> {history.push('/')}</div> : renderForm}
       </div>
     </div>
   );
