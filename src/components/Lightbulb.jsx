@@ -1,21 +1,22 @@
 
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import "./stylesheets/lightbulb.css"
 
 
 function Lightbulb({movie}) {
 
-  // useEffect(() => {
-  //   fetch(`http://localhost:9292/movies/${movie.id}`)
-  // }, [])
+  const [avgScore, setScores] = useState(0)
 
+  useEffect(() => {
+    fetch(`http://localhost:9292/movies/${movie.id}/reviews/scores`)
+    .then(resp => resp.json())
+    .then(data => setScores(data.reduce((a,b) => a + b, 0) / data.length))
+  }, [])
 
-  // const lbScore = movie.reviews
-
-  // useEffect(() => {
-  //   console.log("data:")
-  //   console.log(lbScore)
-  // }, [])
+  useEffect(() => {
+    console.log("data:")
+    console.log(scores)
+  }, [avgScore])
 
 
   return (

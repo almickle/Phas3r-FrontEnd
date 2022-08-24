@@ -30,7 +30,7 @@ function MovieCard({movie}) {
             </div>
             <button onClick = {handleClick}> Reviews </button>
             <button onClick = {handleAddReviewClick}> Add a Review </button>
-            <Lightbulb />
+            <Lightbulb movie={movie}/>
         </div>
     </div>
   )
