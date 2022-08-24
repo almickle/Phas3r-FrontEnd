@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {useHistory} from 'react-router-dom'
 import "./stylesheets/login.css";
 
@@ -10,18 +10,14 @@ function App() {
 
   let history = useHistory()
 
-// useeffect fetch the users, set state(users), 
+  useEffect(() => {
+    fetch("http://localhost:9292/users")
+    .then(resp => resp.json())
+    .then(data => {
+      setUsers(data)})
+}, [])
 
-  const database = [
-    {
-      username: "user1",
-      password: "pass1"
-    },
-    {
-      username: "user2",
-      password: "pass2"
-    }
-  ];
+  const database = users;
 
   const errors = {
     uname: "Invalid username",
