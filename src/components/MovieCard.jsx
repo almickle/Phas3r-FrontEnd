@@ -1,6 +1,5 @@
 import "./stylesheets/moviecard.css"
 import {Switch, Route, useHistory} from "react-router-dom"
-import MovieReview from "./MovieReview"
 
 
 function MovieCard({movie}) {
@@ -9,7 +8,7 @@ function MovieCard({movie}) {
   let history = useHistory()
 
   function handleClick(){
-    history.push(`/${movie.id}/reviews`)
+    history.push(`/movies/${movie.id}/reviews`)
   }
 
   return (
