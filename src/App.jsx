@@ -38,8 +38,8 @@ function App() {
         fetch("http://localhost:9292/movies")
         .then(resp => resp.json())
         .then(data => {
-          console.log("Data:")
-          console.log(data)
+          // console.log("Data:")
+          // console.log(data)
           setMovieData(data)})
     }, [])
 
@@ -71,7 +71,7 @@ function App() {
           <Login/>
         </Route>
         <Route exact path="/movies/:id/reviews">
-          <MovieReview/>
+          <MovieReview movieData={movieData}/>
         </Route>
         <Route exact path="/movie_form">
           <MovieForm/>
