@@ -18,9 +18,6 @@ function MovieCard({movie}) {
                 <p id="movie-desc">{movie.description}</p>
             </div>
         </div>
-        {/* <div id="movie-desc-div">
-            <p id="movie-desc">{movie.description}</p>
-        </div> */}
     </div>
   )
 }
