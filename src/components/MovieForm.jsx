@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {useState} from 'react'
 import './stylesheets/movieform.css'
 
@@ -7,22 +7,26 @@ function MovieForm() {
     const[newMovie, setNewMovie] = useState({title: "", thumbnail_url: "", director: "",
      description: "", budget: "", box_office: ""})
 
-      function handleSubmit(e) {
-        e.preventDefault();
-        fetch ('http://localhost:9292/movies', {
+
+      fetch('http://localhost:9292/movies', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                title: newMovie.title, thumbnail_url: newMovie.thumbnail_url, director: newMovie.director, 
-                description: newMovie.description, budget: newMovie.budget, box_office: newMovie.box_office
-
-            }),
+                title: "Dirty Cowboy Party",
+                thumbnail_url: "https://upload.wikimedia.org/wikipedia/en/8/8b/No_Country_for_Old_Men_poster.jpg",
+                director: "Spielberg", 
+                description: "potato tomato booyah",
+                budget: 100000,
+                box_office: 1000000000
+            })
         })
-        console.log('test')
-        setNewMovie()
-      }
+        .catch(error => console.log(error))
+
+      useEffect(() => {
+        console.log(newMovie)
+      }, [newMovie])
     
   
   return (
@@ -31,11 +35,11 @@ function MovieForm() {
     <form>
       <div className="input-container">
         <label> Title </label>
-        <input type="text" name="Title" placeholder = "Title" />
+        <input type="text" name="Title" placeholder = "Title" onChange={(event) => setNewMovie({title: "Michael"})}/>
       </div>
       <div className="input-container">
         <label> Movie Image </label>
-        <input type="text" name="image" placeholder = "Movie Image" />
+        <input type="text" name="image" placeholder = "Movie Image" onChange={(event) => setNewMovie({thumbnail_url: "Image"})}/>
       </div>
       <div className="input-container">
         <label> Director </label>
