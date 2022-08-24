@@ -12,7 +12,7 @@ history.push('/movie_form')
 }
 
 function handleAddReviewClick(){
-  console.log('test 2')
+  history.push('/review_form')
 }
 
   const movieElements = movieData.map(movie => {
