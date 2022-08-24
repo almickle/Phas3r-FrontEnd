@@ -1,0 +1,31 @@
+#navbar {
+    height: 200px;
+    align-items: center;
+    display: flex;
+    margin-bottom: 1%;
+}
+
+#navbar-logo {
+    float: left;
+    height: 100%;
+}
+
+#banner {
+    display: flex;
+    float: left;
+    background-color: #333;
+    height: 50px;
+    width: 100%;
+    justify-content: center;
+}
+
+.route-link {
+    margin-top: 8px;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: azure;
+    font-family: "CoreCircus", sans-serif;
+    /* letter-spacing: -0.5rem; */
+    font-size: 1.3vw;
+    text-decoration: none;
+}

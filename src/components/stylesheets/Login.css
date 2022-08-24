@@ -7,7 +7,7 @@
     gap: 20px;
     height: 100vh;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    background-image: url(https://wallpaperaccess.com/full/3302863.jpg);
+    background-image: url(https://www.rocketpartyequipment.co.za/wp-content/uploads/2017/04/Popcorn-Boxes-810x966.jpg);
   }
   
   input[type="text"],
@@ -20,14 +20,14 @@
     margin-top: 10px;
     cursor: pointer;
     font-size: 15px;
-    background: #a44128;
+    background: #dd3c3c;
     border: 1px solid white;
     color: #fff;
     padding: 10px 20px;
   }
   
   input[type="submit"]:hover {
-    background: #5382d3;
+    background: #cb7d49;
   }
   
   .button-container {
@@ -38,8 +38,9 @@
   .login-form {
     height: 250px;
     width: 450px;
-    background-color: rgb(192, 183, 108);
-    padding: 2rem;
+    background-color: rgb(239, 235, 194);
+    border:solid rgba(27, 27, 27, 0.2);
+    padding: 3rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   
