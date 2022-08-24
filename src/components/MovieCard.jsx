@@ -11,6 +11,10 @@ function MovieCard({movie}) {
     history.push(`/movies/${movie.id}/reviews`)
   }
 
+  function handleAddReviewClick(){
+    history.push(`/review_form/${movie.id}`)
+  }
+
   return (
     <div id="movie-card-div">
         <div className="movie-img-div" onClick = {handleClick}>
@@ -25,6 +29,7 @@ function MovieCard({movie}) {
                 <p id="movie-desc">{movie.description}</p>
             </div>
             <button onClick = {handleClick}> Reviews </button>
+            <button onClick = {handleAddReviewClick}> Add a Review </button>
             <Lightbulb />
         </div>
     </div>
