@@ -6,8 +6,10 @@ import Movies from "./components/Movies"
 import NavBar from "./components/NavBar"
 import Reviews from "./components/Reviews"
 import Login from "./components/Login"
+import MovieReview from './components/MovieReview'
 
 import "./components/stylesheets/application.css";
+
 
 
 function App() {
@@ -66,6 +68,9 @@ function App() {
         </Route>
         <Route exact path="/login">
           <Login/>
+        </Route>
+        <Route exact path="/movies/1/reviews">
+          <MovieReview/>
         </Route>
       </Switch>
   </div>

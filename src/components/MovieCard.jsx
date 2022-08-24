@@ -1,12 +1,15 @@
 import "./stylesheets/moviecard.css"
-import {useHistory} from "react-router-dom"
+import {Switch, Route, useHistory} from "react-router-dom"
+import MovieReview from "./MovieReview"
+
 
 function MovieCard({movie}) {
+    
 
   let history = useHistory()
 
   function handleClick(){
-    history.push(`/movie/${movie.id}`)
+    history.push(`/${movie.id}/reviews`)
   }
 
   return (
