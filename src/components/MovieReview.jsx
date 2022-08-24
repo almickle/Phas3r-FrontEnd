@@ -1,18 +1,15 @@
 import { useEffect, useState } from "react"
 import "./stylesheets/moviereview.css"
 
-function MovieReview({movieData}) {
+function MovieReview() {
 
     const [movieID, setMovieID] = useState()
 
     useEffect(() => {
-        setMovieID(window.location.href.toString().match(/\/[0-9]\//)[0].split("")[1])
+        setMovieID(window.location.href.toString().match(/\/[0-9]+\//)[0].replaceAll("/", ""))
     }, [])
 
-    useEffect(() => {
-        console.log("MovieID:")
-        console.log(movieID)
-    }, [movieID])
+    console.log(window.location.href.toString().match(/\/[0-9]+\//)[0].replaceAll("/", ""))
 
 
   return (
