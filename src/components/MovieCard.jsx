@@ -6,9 +6,9 @@ function MovieCard({movie}) {
 
   return (
     <div id="movie-card-div">
-    <div className="movie-img-div" key={movie.id}>
-        <img src={movie.thumbnail_url} key={movie.id} alt={""} className="movie-img" />
-    </div>
+        <div className="movie-img-div">
+            <img className="movie-img" src={movie.thumbnail_url} alt={""} />
+        </div>
     </div>
   )
 }

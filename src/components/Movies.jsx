@@ -8,7 +8,7 @@ function Movies({movieData}) {
 
   const movieElements = movieData.map(movie => {
     return (
-      <MovieCard movie={movie} />
+      <MovieCard movie={movie} key={movie.id}/>
     )
 })
 
