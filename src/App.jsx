@@ -8,6 +8,7 @@ import Login from "./components/Login"
 import MovieReview from './components/MovieReview'
 import MovieForm from './components/MovieForm'
 import ReviewForm from './components/ReviewForm'
+import SignUp from './components/SignUp'
 
 import "./components/stylesheets/application.css";
 
@@ -78,6 +79,9 @@ function App() {
         </Route>
         <Route exact path="/review_form/:id">
           <ReviewForm movieData={movieData}/>
+        </Route>
+        <Route exact path="/user/sign_up">
+          <SignUp movieData={movieData}/>
         </Route>
       </Switch>
   </div>

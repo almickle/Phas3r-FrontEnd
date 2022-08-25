@@ -49,6 +49,10 @@ function App() {
       <div className="error">{errorMessages.message}</div>
     );
 
+    function handleSignClick (){
+      history.push('/user/sign_up')
+    }
+
   // JSX code for login form
   const renderForm = (
     <div className="form">
@@ -66,7 +70,9 @@ function App() {
         <div className="button-container">
           <input type="submit"></input>
         </div>
+
       </form>
+      <span onClick = {handleSignClick}> Sign Up </span>
     </div>
   );
 
