@@ -1,0 +1,12 @@
+#lightbulb-span {
+    display: flex;
+    flex-direction: row;
+}
+
+#lightbulb-div {
+    height: 100px;
+}
+
+#lightbulb-img {
+    height: 100%;
+}
