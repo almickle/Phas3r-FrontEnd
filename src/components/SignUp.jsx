@@ -1,4 +1,5 @@
-import {useState} from 'react'
+import {useState}from 'react'
+import {useHistory} from 'react-router-dom'
 import "./stylesheets/signup.css"
 
 function SignUp() {
@@ -8,7 +9,10 @@ function SignUp() {
     const [stateCritic,setStateCritic] = useState('')
 
 
+      const history = useHistory();
+      
 function handleSubmit(){
+
     fetch('http://localhost:9292/users', {
           method: "POST",
           headers: {
@@ -20,6 +24,7 @@ function handleSubmit(){
             password: statePassword,
           })
       })
+      history.push('/login')
 }
 
   return (
@@ -38,7 +43,7 @@ function handleSubmit(){
         <label> Critic </label>
         <input type="text" name="Critic?" placeholder = "Critic?" required onChange= {(e)=>setStateCritic(e.target.value)}/>
       </div>
-      <button> Sign Up </button>
+      <button type ='submit'> Sign Up </button>
       </form>
       </div>
       </div>
