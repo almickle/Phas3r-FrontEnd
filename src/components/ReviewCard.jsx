@@ -22,7 +22,7 @@ function ReviewCard({movie}) {
         <p>Comment: {review.comment}</p>
         <p>Timestamp: {review.created_at}</p>
         <p>Last updated: {review.updated_at}</p>
-        <p>     ------------------------------------------    </p>
+        <p>     ------------------------------------------     </p>
     </div>))
 
   return (
