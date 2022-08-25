@@ -1,21 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./stylesheets/movies.css";
 
 
-function ReviewCard({data}) {
+function ReviewCard({movie}) {
 
-  console.log(data)
-    // const {id, score, comment, user_id, movie_id, timestamps} = review 
-    // console.log(review)
+  const [movieState, setMovie] = useState({
+    title: "default",
+    reviews: []})
+
+  useEffect(() => {
+    setMovie(movie)
+  }, [])
+
+  useEffect(() => {
+    console.log(movieState)
+  }, [movieState])
+
+  const reviewsElements = movieState.reviews.map(review => 
+    (<p>{review.comment}</p>))
 
   return (
     <div>
-      {/* <h3>Review #{id}</h3>
-      <ul>Score {score}/10</ul>
-      <ul>Comment: {comment}</ul>
-      <ul>User ID {user_id}</ul>
-      <ul>Movie # {movie_id}</ul>
-      <ul>{timestamps}</ul> */}
+      <h3>Movie {movie.title}</h3>
+      <img src={movie.thumbnail_url}/>
+      <ul>Score {movie.score}/10</ul>
+      {reviewsElements}
       </div>
   )
 }
