@@ -7,7 +7,7 @@ function MovieCard({movie}) {
   let history = useHistory()
 
   function handleClick(){
-    history.push(`/movies/${movie.id}/reviews`)
+    history.push('/reviews')
   }
 
   function handleAddReviewClick(){
