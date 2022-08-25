@@ -2,15 +2,17 @@ import React from 'react';
 import ReviewCard from './ReviewCard';
 
 function Reviews({ movieData }) {
+
+  const movieElements = movieData.map((movie) => {
+    console.log("movie")
+    console.log(movie)
+    return <ReviewCard movie={movie} key={movie.id}/>
+  })
+
   return(
-  <div>{movieData.map((data) => {
-    return (
-    <ReviewCard key={data.id}
-      data={data}
-       />
-       )
-    })}
-    </div>
+  <div>
+    {movieElements}
+  </div>
   )
 }
 

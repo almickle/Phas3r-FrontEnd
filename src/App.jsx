@@ -44,10 +44,7 @@ function App() {
           setMovieData(data)})
     }, [])
 
-    const [reviews, setReviews] = useState([])
-
-
-
+  
   return (
 
     <div id="container">
