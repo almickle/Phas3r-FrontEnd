@@ -8,9 +8,7 @@ function ReviewForm({movieData}) {
    const[stateScore, setStateScore] = useState('')
    const[stateComment, setStateComment] = useState('')
 
-   
-
-   const newReview = {score: stateScore, comment: stateComment}
+  
 
    function handleSubmit() {
     fetch('http://localhost:9292/reviews', {

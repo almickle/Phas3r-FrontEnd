@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import "./stylesheets/signup.css"
 
 function SignUp() {
 
@@ -6,8 +7,6 @@ function SignUp() {
     const [statePassword, setStatePassword] = useState('')
     const [stateCritic,setStateCritic] = useState('')
 
-
-    const [newUser, setNewUser]= useState({ is_critic: stateCritic,username: stateUsername, password: statePassword})
 
 function handleSubmit(){
     fetch('http://localhost:9292/users', {
@@ -24,15 +23,16 @@ function handleSubmit(){
 }
 
   return (
-    <div className ='input-container'>
+    <div className="signup_page">
+    <div className ='login-form'>
     <form onSubmit = {handleSubmit}>
     <div className="input-container">
         <label> Username </label>
-        <input type="text" name="Username" placeholder = "Username" required onChange= {(e)=>setStateUsername(e.target.value)}/>
+        <input type="text" name="uname" placeholder = "Username" required onChange= {(e)=>setStateUsername(e.target.value)}/>
       </div>
       <div className="input-container">
         <label> Password </label>
-        <input type="text" name="Password" placeholder = "Password" required onChange= {(e)=>setStatePassword(e.target.value)}/>
+        <input type="text" name="pass" placeholder = "Password" required onChange= {(e)=>setStatePassword(e.target.value)}/>
       </div>
       <div className="input-container">
         <label> Critic </label>
@@ -40,6 +40,7 @@ function handleSubmit(){
       </div>
       <button> Sign Up </button>
       </form>
+      </div>
       </div>
   )
 }

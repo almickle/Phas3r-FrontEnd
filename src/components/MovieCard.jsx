@@ -1,6 +1,5 @@
 import "./stylesheets/moviecard.css"
 import {useHistory} from "react-router-dom"
-import {useEffect, useState} from 'react'
 import Lightbulb from "./Lightbulb"
 
 function MovieCard({movie}) {

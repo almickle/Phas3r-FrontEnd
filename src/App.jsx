@@ -81,7 +81,7 @@ function App() {
           <ReviewForm movieData={movieData}/>
         </Route>
         <Route exact path="/user/sign_up">
-          <SignUp movieData={movieData}/>
+          <SignUp />
         </Route>
       </Switch>
   </div>

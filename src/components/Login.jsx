@@ -93,7 +93,7 @@ function App() {
   return (
     <div className="app">
       <div className="login-form">
-        <div className="title">Sign In</div>
+
         {isSubmitted ? <div> {history.push('/')}</div> : renderForm}
       </div>
     </div>
