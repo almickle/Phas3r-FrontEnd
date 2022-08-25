@@ -24,7 +24,7 @@ function handleSubmit(){
 }
 
   return (
-    <div>
+    <div className ='input-container'>
     <form onSubmit = {handleSubmit}>
     <div className="input-container">
         <label> Username </label>
