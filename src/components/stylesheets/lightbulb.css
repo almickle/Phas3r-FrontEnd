@@ -1,6 +1,7 @@
 #lightbulb-span {
     display: flex;
     flex-direction: row;
+    margin-top: 6%;
 }
 
 #lightbulb-div {
