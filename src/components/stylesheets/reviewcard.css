@@ -1,0 +1,35 @@
+#movie-card {
+    display: flex;
+    flex-direction: row;
+}
+
+#reviews-div {
+    height: 200px;
+    overflow: scroll;
+}
+
+#review-div {
+
+}
+
+#content-div {
+    display: flex;
+    flex-direction: column;
+}
+
+#movie-title {
+
+}
+
+#movie-img {
+    float: left;
+    height: 100%;
+}
+
+#movie-img-div {
+    height: 400px;
+}
+
+#movie-card {
+
+}

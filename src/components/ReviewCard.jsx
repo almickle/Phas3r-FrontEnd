@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import "./stylesheets/movies.css";
+import "./stylesheets/reviewcard.css";
 
 
 function ReviewCard({movie}) {
@@ -17,15 +17,26 @@ function ReviewCard({movie}) {
   }, [movieState])
 
   const reviewsElements = movieState.reviews.map(review => 
-    (<p>{review.comment}</p>))
+    (<div id="review-div">
+        <p>Score: {review.score}</p>
+        <p>Comment: {review.comment}</p>
+        <p>Timestamp: {review.created_at}</p>
+        <p>Last updated: {review.updated_at}</p>
+        <p>     ------------------------------------------    </p>
+    </div>))
 
   return (
-    <div>
-      <h3>Movie {movie.title}</h3>
-      <img src={movie.thumbnail_url}/>
-      <ul>Score {movie.score}/10</ul>
-      {reviewsElements}
+    <div id="movie-card">
+      <div id="movie-img-div">
+        <img id='movie-img' src={movie.thumbnail_url}/>
       </div>
+      <div id="content-div">
+        <h3 id="movie-title">{movie.title}</h3>
+        <div id="reviews-div">
+          {reviewsElements}
+        </div>
+      </div>
+    </div>
   )
 }
 
