@@ -1,12 +1,12 @@
 import React from 'react';
 import ReviewCard from './ReviewCard';
 
-function Reviews({ reviews }) {
+function Reviews({ movieData }) {
   return(
-  <div>{reviews.map((review) => {
+  <div>{movieData.map((data) => {
     return (
-    <ReviewCard key={review.id}
-      review={review}
+    <ReviewCard key={data.id}
+      data={data}
        />
        )
     })}

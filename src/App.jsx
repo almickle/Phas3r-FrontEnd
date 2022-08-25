@@ -46,12 +46,6 @@ function App() {
 
     const [reviews, setReviews] = useState([])
 
-    useEffect(() => {
-      fetch("http://localhost:9292/reviews")
-      .then(resp => resp.json())
-      .then (data => {setReviews(data)})
-    }, [])
-
 
 
   return (
@@ -66,7 +60,7 @@ function App() {
           <Movies movieData={movieData}/>
         </Route>
         <Route exact path="/reviews">
-          <Reviews reviews={reviews}/>
+          <Reviews movieData = {movieData}/>
         </Route>
         <Route exact path="/login">
           <Login/>
