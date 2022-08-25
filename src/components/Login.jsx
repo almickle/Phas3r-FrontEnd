@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import {useHistory} from 'react-router-dom'
 import "./stylesheets/login.css";
+import {Switch} from 'antd'
 
 function App() {
  
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [users, setUsers] = useState([]);
+  const[toggle,setToggle] = useState(false)
 
   let history = useHistory()
 
@@ -23,6 +25,7 @@ function App() {
     uname: "Invalid username",
     pass: "Invalid password"
   };
+  console.log(users)
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -53,6 +56,11 @@ function App() {
       history.push('/user/sign_up')
     }
 
+    function toggler (){
+      toggle ? setToggle(false): setToggle(true)
+    }
+
+
   // JSX code for login form
   const renderForm = (
     <div className="form">
@@ -66,6 +74,12 @@ function App() {
           <label>Password </label>
           <input type="password" name="pass" required />
           {renderErrorMessage("pass")}
+        </div>
+        <div className="toggle-container"> 
+        Critic
+        <Switch type = "toggle" onClick = {toggler}/>
+        Audience
+        {renderErrorMessage("toggle")}
         </div>
         <div className="button-container">
           <input type="submit"></input>

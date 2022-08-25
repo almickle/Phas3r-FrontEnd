@@ -19,6 +19,7 @@ function ReviewForm({movieData}) {
               "Content-Type": "application/json",
           },
           body: JSON.stringify({
+            username: '',
               score: stateScore,
               comment: stateComment,
               user_id: '',
@@ -35,10 +36,10 @@ function ReviewForm({movieData}) {
         <label> Title </label>
         <input type="text" name="Title" value = {movie.title} />
       </div>
-      {/* <div className="input-container">
+      <div className="input-container">
         <label> Username </label>
         <input type="text" name="Username" placeholder = "Username" required/>
-      </div> */}
+      </div>
       <div className="input-container">
         <label> comment </label>
         <input type="text" name="comment" placeholder = "comment" required onChange={(event) => setStateComment(event.target.value)}/>
