@@ -19,8 +19,8 @@ function ReviewForm({movieData}) {
               "Content-Type": "application/json",
           },
           body: JSON.stringify({
-              score: newReview.score,
-              comment: newReview.comment,
+              score: stateScore,
+              comment: stateComment,
               user_id: '',
               movie_id: '',
           })
