@@ -35,7 +35,7 @@ function App() {
           // console.log(data)
           setMovieData(data)})
     }, [])
-console.log(movieData)
+// 
   
   return (
 
