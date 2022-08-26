@@ -5,7 +5,7 @@ import  {useState} from 'react'
 
 function MovieCard({movie}) {
 
-  console.log(movie.id)
+
 
   const [deleteMovie, setDeleteMovie] = useState([]);
 
@@ -20,9 +20,12 @@ function MovieCard({movie}) {
     history.push(`/review_form/${movie.id}`)
   }
 
-  function handleDeleteMovie(id){
-    console.log(id)
-   
+  function handleDeleteMovie(){
+    console.log(movie.id)
+    fetch(`http://localhost:9292/movies/${movie.id}`, {
+            method: "DELETE", 
+    })
+    setDeleteMovie(deleteMovie)
   }
 
   return (
@@ -40,7 +43,7 @@ function MovieCard({movie}) {
             </div>
             <button onClick = {handleClick}> Reviews </button>
             <button onClick = {handleAddReviewClick}> Add a Review </button>
-            <button onClick = {()=>handleDeleteMovie(movie.id)}> Delete Movie </button>
+            <button onClick={handleDeleteMovie}>Delete Movie </button>
             <Lightbulb movie={movie}/>
         </div>
     </div>
