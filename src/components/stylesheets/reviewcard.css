@@ -3,34 +3,28 @@
     flex-direction: row;
     width: 675px;
 }
-
 #reviews-div {
-    height: 200px;
+    height: 300px;
     overflow: scroll;
+    border: 0.175em solid #333;
+    text-align: center;
 }
-
 #review-div {
-
 }
-
 #content-div {
     display: flex;
     flex-direction: column;
 }
-
 #movie-title {
-
+    text-align: center;
 }
-
 #movie-img {
     float: left;
     height: 100%;
 }
-
 #movie-img-div {
     height: 400px;
+    padding:15px
 }
-
 #movie-card {
-
 }

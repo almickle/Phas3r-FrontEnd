@@ -13,7 +13,7 @@ function ReviewCard({movie}) {
   }, [])
 
   useEffect(() => {
-    console.log(movieState)
+    // console.log(movieState)
   }, [movieState])
 
   const reviewsElements = movieState.reviews.map(review => 

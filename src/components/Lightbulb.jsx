@@ -14,8 +14,8 @@ function Lightbulb({movie}) {
   }, [])
 
   useEffect(() => {
-    console.log("data:")
-    console.log(avgScore)
+    // console.log("data:")
+    // console.log(avgScore)
   }, [avgScore])
 
   const lightBulbs = []
