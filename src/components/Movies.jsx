@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom"
 import "./stylesheets/movies.css"
 
 
-function Movies({movieData}) {
+function Movies({movieData, setMovieData}) {
 
   let history = useHistory()
 
@@ -13,7 +13,7 @@ history.push('/movie_form')
 
   const movieElements = movieData.map(movie => {
     return (
-      <MovieCard movie={movie} key={movie.id}/>
+      <MovieCard movie={movie} movies = {movieData} setMovieData = {setMovieData} key={movie.id}/>
     )
 })
 

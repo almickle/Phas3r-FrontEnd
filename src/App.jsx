@@ -46,7 +46,7 @@ function App() {
           <Home movieData={movieData} />
         </Route>
         <Route exact path="/movies">
-          <Movies movieData={movieData}/>
+          <Movies movieData={movieData} setMovieData = {setMovieData}/>
         </Route>
         <Route exact path="/reviews">
           <Reviews movieData = {movieData}/>
